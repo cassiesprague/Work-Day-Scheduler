@@ -1,4 +1,5 @@
 $("#currentDay").text(moment().format('dddd MMMM Do YYYY'));
+//Above is how to access current day
 
   $(".saveBtn").on("click", function () {
   //Above is the event listener for the save button
@@ -26,8 +27,6 @@ $("#currentDay").text(moment().format('dddd MMMM Do YYYY'));
     $(".time-block").each(function() {
         var currHour = parseInt($(this).attr("id"));
 
-        // console.log(this); //each time-block
-
         if (currHour > hour) {
             $(this).addClass("future");
         } else if (currHour === hour) {
@@ -37,3 +36,4 @@ $("#currentDay").text(moment().format('dddd MMMM Do YYYY'));
         }
     })
 };
+//Above should be how to get the correct colors for past present and future times but I cant find the corect way to get it to work. Still need to work on it
